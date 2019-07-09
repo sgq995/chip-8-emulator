@@ -1,6 +1,6 @@
 CC      = gcc
 CFLAGS  = -std=c11 -Wall -Wextra -Wpedantic -Iinclude
-LDFLAGS =
+LDFLAGS = -lSDL2
 
 SRCDIR = src
 INCDIR = include
