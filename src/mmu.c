@@ -25,14 +25,14 @@ void mmu_save_8bit(mmu_t *mmu, uint16_t address, uint8_t value) {
   mmu->memory[address] = value;
 }
 
-uint16_t mmu_load_16bit_le(mmu_t *mmu, uint16_t address) {
+uint16_t mmu_load_16bit_be(mmu_t *mmu, uint16_t address) {
   assert(mmu != NULL);
   assert(address < sizeof(mmu->memory));
 
-  return mmu->memory[address];
+  return (uint16_t)((mmu->memory[address] << 8) | (mmu->memory[address + 1]));
 }
 
-void mmu_save_16bit_le(mmu_t *mmu, uint16_t address, uint16_t value) {
+void mmu_save_16bit_be(mmu_t *mmu, uint16_t address, uint16_t value) {
   assert(mmu != NULL);
   assert(address < sizeof(mmu->memory));
 

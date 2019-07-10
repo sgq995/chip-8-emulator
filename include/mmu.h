@@ -29,8 +29,8 @@ uint8_t mmu_load_8bit(mmu_t *mmu, uint16_t address);
 
 void mmu_save_8bit(mmu_t *mmu, uint16_t address, uint8_t value);
 
-uint16_t mmu_load_16bit_le(mmu_t *mmu, uint16_t address);
+uint16_t mmu_load_16bit_be(mmu_t *mmu, uint16_t address);
 
-void mmu_save_16bit_le(mmu_t *mmu, uint16_t address, uint16_t value);
+void mmu_save_16bit_be(mmu_t *mmu, uint16_t address, uint16_t value);
 
 #endif  /* MMU_H_ */
